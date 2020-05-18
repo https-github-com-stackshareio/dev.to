@@ -61,7 +61,6 @@ class AsyncInfoController < ApplicationController
         experience_level: @user.experience_level,
         preferred_languages_array: @user.preferred_languages_array,
         config_body_class: @user.config_body_class,
-        pro: @user.pro?,
         created_at: @user.created_at
       }
     end
@@ -77,7 +76,6 @@ class AsyncInfoController < ApplicationController
     #{current_user&.saw_onboarding}__
     #{current_user&.checked_code_of_conduct}__
     #{current_user&.articles_count}__
-    #{current_user&.pro?}__
     #{current_user&.blocking_others_count}__
     #{remember_user_token}"
   end
